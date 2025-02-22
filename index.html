@@ -6,73 +6,79 @@
     <title>My Personal Website</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .neon-text {
+            text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff, 0 0 15px #ff00ff;
+        }
+        .glitch {
+            animation: glitch 0.5s infinite;
+        }
+        @keyframes glitch {
+            0% { transform: translate(0, 0); }
+            25% { transform: translate(-2px, 2px); }
+            50% { transform: translate(2px, -2px); }
+            75% { transform: translate(-2px, 2px); }
+            100% { transform: translate(0, 0); }
+        }
+    </style>
 </head>
-<body class="bg-gray-100 text-gray-900">
+<body class="bg-gray-900 text-gray-100">
     
-    <!-- Navigation Bar -->
-    <nav class="bg-blue-600 p-4 text-white fixed w-full z-10">
+    <nav class="bg-purple-700 p-4 text-white fixed w-full z-10">
         <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold">My Website</h1>
+            <h1 class="text-2xl font-bold neon-text">GlitchVerse</h1>
             <ul class="flex space-x-4">
                 <li><a href="#home" class="hover:underline">Home</a></li>
-                <li><a href="#about" class="hover:underline">About Me</a></li>
+                <li><a href="#about" class="hover:underline">About</a></li>
                 <li><a href="#gallery" class="hover:underline">Gallery</a></li>
-                <li><a href="#contact" class="hover:underline">Contact Me</a></li>
+                <li><a href="#contact" class="hover:underline">Contact</a></li>
             </ul>
         </div>
     </nav>
     
-    <!-- Home Section -->
-    <section id="home" class="h-screen flex items-center justify-center bg-blue-500 text-white text-center">
+    <section id="home" class="h-screen flex items-center justify-center bg-black text-white text-center">
         <div>
-            <h2 class="text-4xl font-bold">Welcome to My Personal Website</h2>
-            <p class="mt-2">Discover my interests, projects, and ways to connect with me.</p>
+            <h2 class="text-5xl font-bold glitch">Welcome to the GlitchVerse</h2>
+            <p class="mt-2 text-lg">Dive into the chaos of creativity and code.</p>
+            <button onclick="randomBg()" class="mt-4 bg-green-500 px-6 py-3 rounded text-black">Click for Chaos</button>
         </div>
     </section>
     
-    <!-- About Me Section -->
-    <section id="about" class="py-20 bg-white text-center">
+    <section id="about" class="py-20 bg-gray-800 text-center">
         <div class="container mx-auto">
-            <h2 class="text-3xl font-bold">About Me</h2>
-            <p class="mt-4">I am a passionate individual who loves technology, design, and creativity.</p>
+            <h2 class="text-3xl font-bold neon-text">Who Am I?</h2>
+            <p class="mt-4">Just another wanderer in the digital realm, exploring the endless void of creativity.</p>
         </div>
     </section>
     
-    <!-- Gallery Section -->
-    <section id="gallery" class="py-20 bg-gray-200 text-center">
+    <section id="gallery" class="py-20 bg-gray-700 text-center">
         <div class="container mx-auto">
-            <h2 class="text-3xl font-bold">Gallery</h2>
+            <h2 class="text-3xl font-bold neon-text">Gallery of Weirdness</h2>
             <div class="grid grid-cols-3 gap-4 mt-6">
-                <img src="https://via.placeholder.com/300" class="rounded shadow-md">
-                <img src="https://via.placeholder.com/300" class="rounded shadow-md">
-                <img src="https://via.placeholder.com/300" class="rounded shadow-md">
+                <img src="https://placekitten.com/300/200" class="rounded shadow-md">
+                <img src="https://placebear.com/300/200" class="rounded shadow-md">
+                <img src="https://picsum.photos/300/200" class="rounded shadow-md">
             </div>
         </div>
     </section>
     
-    <!-- Contact Me Section -->
-    <section id="contact" class="py-20 bg-white text-center">
+    <section id="contact" class="py-20 bg-gray-800 text-center">
         <div class="container mx-auto">
-            <h2 class="text-3xl font-bold">Contact Me</h2>
-            <form class="mt-4 max-w-md mx-auto bg-gray-100 p-6 rounded shadow">
+            <h2 class="text-3xl font-bold neon-text">Summon Me</h2>
+            <form class="mt-4 max-w-md mx-auto bg-gray-900 p-6 rounded shadow">
                 <input type="text" placeholder="Your Name" class="w-full p-2 mb-2 border rounded">
                 <input type="email" placeholder="Your Email" class="w-full p-2 mb-2 border rounded">
                 <textarea placeholder="Your Message" class="w-full p-2 mb-2 border rounded"></textarea>
-                <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Send</button>
+                <button class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">Send to the Void</button>
             </form>
         </div>
     </section>
     
-    <!-- Smooth Scroll Script -->
     <script>
-        $(document).ready(function(){
-            $('a[href^="#"]').on('click', function(event) {
-                event.preventDefault();
-                $('html, body').animate({
-                    scrollTop: $($.attr(this, 'href')).offset().top
-                }, 800);
-            });
-        });
+        function randomBg() {
+            const colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
+            document.body.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        }
     </script>
 </body>
 </html>
