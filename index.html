@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+    
+    <!-- Navigation Bar -->
+    <nav class="bg-blue-600 p-4 text-white fixed w-full z-10">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">My Website</h1>
+            <ul class="flex space-x-4">
+                <li><a href="#home" class="hover:underline">Home</a></li>
+                <li><a href="#about" class="hover:underline">About Me</a></li>
+                <li><a href="#gallery" class="hover:underline">Gallery</a></li>
+                <li><a href="#contact" class="hover:underline">Contact Me</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Home Section -->
+    <section id="home" class="h-screen flex items-center justify-center bg-blue-500 text-white text-center">
+        <div>
+            <h2 class="text-4xl font-bold">Welcome to My Personal Website</h2>
+            <p class="mt-2">Discover my interests, projects, and ways to connect with me.</p>
+        </div>
+    </section>
+    
+    <!-- About Me Section -->
+    <section id="about" class="py-20 bg-white text-center">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold">About Me</h2>
+            <p class="mt-4">I am a passionate individual who loves technology, design, and creativity.</p>
+        </div>
+    </section>
+    
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-gray-200 text-center">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold">Gallery</h2>
+            <div class="grid grid-cols-3 gap-4 mt-6">
+                <img src="https://via.placeholder.com/300" class="rounded shadow-md">
+                <img src="https://via.placeholder.com/300" class="rounded shadow-md">
+                <img src="https://via.placeholder.com/300" class="rounded shadow-md">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Me Section -->
+    <section id="contact" class="py-20 bg-white text-center">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold">Contact Me</h2>
+            <form class="mt-4 max-w-md mx-auto bg-gray-100 p-6 rounded shadow">
+                <input type="text" placeholder="Your Name" class="w-full p-2 mb-2 border rounded">
+                <input type="email" placeholder="Your Email" class="w-full p-2 mb-2 border rounded">
+                <textarea placeholder="Your Message" class="w-full p-2 mb-2 border rounded"></textarea>
+                <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Send</button>
+            </form>
+        </div>
+    </section>
+    
+    <!-- Smooth Scroll Script -->
+    <script>
+        $(document).ready(function(){
+            $('a[href^="#"]').on('click', function(event) {
+                event.preventDefault();
+                $('html, body').animate({
+                    scrollTop: $($.attr(this, 'href')).offset().top
+                }, 800);
+            });
+        });
+    </script>
+</body>
+</html>
