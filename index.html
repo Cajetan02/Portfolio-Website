@@ -3,10 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
+    <title>My Portfolio - GlitchVerse</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
+        body {
+            overflow-x: hidden;
+            transition: background 1s ease-in-out;
+        }
         .neon-text {
             text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff, 0 0 15px #ff00ff;
         }
@@ -20,17 +24,25 @@
             75% { transform: translate(-2px, 2px); }
             100% { transform: translate(0, 0); }
         }
+        .falling {
+            position: absolute;
+            animation: fall 5s linear forwards;
+        }
+        @keyframes fall {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(100vh) rotate(360deg); }
+        }
     </style>
 </head>
 <body class="bg-gray-900 text-gray-100">
-    
     <nav class="bg-purple-700 p-4 text-white fixed w-full z-10">
         <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold neon-text">GlitchVerse</h1>
+            <h1 class="text-2xl font-bold neon-text">GlitchVerse Portfolio</h1>
             <ul class="flex space-x-4">
                 <li><a href="#home" class="hover:underline">Home</a></li>
                 <li><a href="#about" class="hover:underline">About</a></li>
                 <li><a href="#gallery" class="hover:underline">Gallery</a></li>
+                <li><a href="#projects" class="hover:underline">Projects</a></li>
                 <li><a href="#contact" class="hover:underline">Contact</a></li>
             </ul>
         </div>
@@ -39,15 +51,15 @@
     <section id="home" class="h-screen flex items-center justify-center bg-black text-white text-center">
         <div>
             <h2 class="text-5xl font-bold glitch">Welcome to the GlitchVerse</h2>
-            <p class="mt-2 text-lg">Dive into the chaos of creativity and code.</p>
-            <button onclick="randomBg()" class="mt-4 bg-green-500 px-6 py-3 rounded text-black">Click for Chaos</button>
+            <p class="mt-2 text-lg">A chaotic portfolio of my projects, skills, and experiments.</p>
+            <button onclick="triggerChaos()" class="mt-4 bg-green-500 px-6 py-3 rounded text-black">Click for Chaos</button>
         </div>
     </section>
     
     <section id="about" class="py-20 bg-gray-800 text-center">
         <div class="container mx-auto">
-            <h2 class="text-3xl font-bold neon-text">Who Am I?</h2>
-            <p class="mt-4">Just another wanderer in the digital realm, exploring the endless void of creativity.</p>
+            <h2 class="text-3xl font-bold neon-text">About Me</h2>
+            <p class="mt-4">A coder, designer, and creative explorer. Passionate about tech, games, and art.</p>
         </div>
     </section>
     
@@ -62,22 +74,61 @@
         </div>
     </section>
     
-    <section id="contact" class="py-20 bg-gray-800 text-center">
+    <section id="projects" class="py-20 bg-gray-900 text-center">
         <div class="container mx-auto">
-            <h2 class="text-3xl font-bold neon-text">Summon Me</h2>
-            <form class="mt-4 max-w-md mx-auto bg-gray-900 p-6 rounded shadow">
-                <input type="text" placeholder="Your Name" class="w-full p-2 mb-2 border rounded">
-                <input type="email" placeholder="Your Email" class="w-full p-2 mb-2 border rounded">
-                <textarea placeholder="Your Message" class="w-full p-2 mb-2 border rounded"></textarea>
-                <button class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">Send to the Void</button>
-            </form>
+            <h2 class="text-3xl font-bold neon-text">My Projects</h2>
+            <p class="mt-4">A collection of things I've built and explored.</p>
+            <ul class="mt-6 text-lg">
+                <li>🎮 <a href="#" onclick="launchGame()" class="text-blue-400 hover:underline">Mini Snake Game (Easter Egg!)</a></li>
+                <li>💡 AI-powered Chatbot</li>
+                <li>📱 Interactive Web Apps</li>
+            </ul>
         </div>
     </section>
     
     <script>
-        function randomBg() {
-            const colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
-            document.body.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        function triggerChaos() {
+            document.body.style.background = "#" + Math.floor(Math.random()*16777215).toString(16);
+            document.querySelectorAll("h2, p, button, li").forEach(el => {
+                el.classList.add("falling");
+            });
+        }
+        
+        function launchGame() {
+            let gameWindow = window.open("", "", "width=400,height=400");
+            gameWindow.document.write(`
+                <html><head>
+                <style>* {margin:0; padding:0;} canvas {background:black; display:block; margin:auto;}</style>
+                </head><body>
+                <canvas id="gameCanvas" width="400" height="400"></canvas>
+                <script>
+                    const canvas = document.getElementById('gameCanvas');
+                    const ctx = canvas.getContext('2d');
+                    let snake = [{x:200, y:200}], direction = 'RIGHT', food = {x:100, y:100};
+                    document.addEventListener('keydown', event => {
+                        const key = event.key;
+                        if (key === 'ArrowUp' && direction !== 'DOWN') direction = 'UP';
+                        if (key === 'ArrowDown' && direction !== 'UP') direction = 'DOWN';
+                        if (key === 'ArrowLeft' && direction !== 'RIGHT') direction = 'LEFT';
+                        if (key === 'ArrowRight' && direction !== 'LEFT') direction = 'RIGHT';
+                    });
+                    function update() {
+                        let head = { ...snake[0] };
+                        if (direction === 'UP') head.y -= 20;
+                        if (direction === 'DOWN') head.y += 20;
+                        if (direction === 'LEFT') head.x -= 20;
+                        if (direction === 'RIGHT') head.x += 20;
+                        if (head.x < 0 || head.x >= 400 || head.y < 0 || head.y >= 400) window.close();
+                        snake.unshift(head);
+                        ctx.clearRect(0, 0, 400, 400);
+                        ctx.fillStyle = 'lime';
+                        snake.forEach(part => ctx.fillRect(part.x, part.y, 20, 20));
+                        ctx.fillStyle = 'red';
+                        ctx.fillRect(food.x, food.y, 20, 20);
+                    }
+                    setInterval(update, 100);
+                <\/script></body></html>
+            `);
         }
     </script>
 </body>
