@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Cajetan's Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -14,16 +14,26 @@
     <nav class="bg-blue-700 p-4 text-white fixed w-full z-10">
         <div class="container mx-auto flex justify-between items-center">
             <div class="flex items-center space-x-3">
-                <div class="logo-container bg-white animate__animated animate__pulse animate__infinite animate__slow">
-                    <!-- Replace with your logo -->
-                    <img src="https://lh3.googleusercontent.com/a/ACg8ocK2u4qZJ0TgvCy8XaEaYe5e6Hc3TokQJ7otqZcJQXTWcMhWWIU=s324-c-no" alt="Logo" class="w-full h-full object-cover">
+                <div id="mySidebar" class="sidebar">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#gallery">Gallery</a>
+                    <a href="#contact">Projects</a>
+                    <a href="#contact">Contact</a>
+                  </div>
+                 
+                <div id="main" class="logo-container  animate__animated animate__pulse animate__infinite animate__slow">
+                    <button  id="main" class="openbtn" onclick="openNav()">
+                         <img src="https://lh3.googleusercontent.com/a/ACg8ocK2u4qZJ0TgvCy8XaEaYe5e6Hc3TokQJ7otqZcJQXTWcMhWWIU=s324-c-no" alt="Logo" class="w-full h-full object-cover">
+                        </button>
                 </div>
             </div>
-            <ul class="hidden md:flex space-x-4">
+            <ul class="hidden md:flex space-x-4 justify-start">
                 <li><a href="#home" class="hover:underline nav-link">Home</a></li>
                 <li><a href="#about" class="hover:underline nav-link">About</a></li>
                 <li><a href="#gallery" class="hover:underline nav-link">Gallery</a></li>
-                <li><a href="#projects" class="hover:underline nav-link">Projects</a></li>
+                <li><a href="#contact" class="hover:underline nav-link">Projects</a></li>
                 <li><a href="#contact" class="hover:underline nav-link">Contact</a></li>
             </ul>
             
