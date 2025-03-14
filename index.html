@@ -3,133 +3,266 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio - GlitchVerse</title>
+    <title>My Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <style>
-        body {
-            overflow-x: hidden;
-            transition: background 1s ease-in-out;
-        }
-        .neon-text {
-            text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff, 0 0 15px #ff00ff;
-        }
-        .glitch {
-            animation: glitch 0.5s infinite;
-        }
-        @keyframes glitch {
-            0% { transform: translate(0, 0); }
-            25% { transform: translate(-2px, 2px); }
-            50% { transform: translate(2px, -2px); }
-            75% { transform: translate(-2px, 2px); }
-            100% { transform: translate(0, 0); }
-        }
-        .falling {
-            position: absolute;
-            animation: fall 5s linear forwards;
-        }
-        @keyframes fall {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(100vh) rotate(360deg); }
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-900 text-gray-100">
-    <nav class="bg-purple-700 p-4 text-white fixed w-full z-10">
+<body>
+    <nav class="bg-blue-700 p-4 text-white fixed w-full z-10">
         <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold neon-text">GlitchVerse Portfolio</h1>
-            <ul class="flex space-x-4">
-                <li><a href="#home" class="hover:underline">Home</a></li>
-                <li><a href="#about" class="hover:underline">About</a></li>
-                <li><a href="#gallery" class="hover:underline">Gallery</a></li>
-                <li><a href="#projects" class="hover:underline">Projects</a></li>
-                <li><a href="#contact" class="hover:underline">Contact</a></li>
+            <div class="flex items-center space-x-3">
+                <div class="logo-container bg-white animate__animated animate__pulse animate__infinite animate__slow">
+                    <!-- Replace with your logo -->
+                    <img src="https://lh3.googleusercontent.com/a/ACg8ocK2u4qZJ0TgvCy8XaEaYe5e6Hc3TokQJ7otqZcJQXTWcMhWWIU=s324-c-no" alt="Logo" class="w-full h-full object-cover">
+                </div>
+            </div>
+            <ul class="hidden md:flex space-x-4">
+                <li><a href="#home" class="hover:underline nav-link">Home</a></li>
+                <li><a href="#about" class="hover:underline nav-link">About</a></li>
+                <li><a href="#gallery" class="hover:underline nav-link">Gallery</a></li>
+                <li><a href="#projects" class="hover:underline nav-link">Projects</a></li>
+                <li><a href="#contact" class="hover:underline nav-link">Contact</a></li>
             </ul>
-        </div>
+
+
     </nav>
     
-    <section id="home" class="h-screen flex items-center justify-center bg-black text-white text-center">
-        <div>
-            <h2 class="text-5xl font-bold glitch">Welcome to the GlitchVerse</h2>
-            <p class="mt-2 text-lg">A chaotic portfolio of my projects, skills, and experiments.</p>
-            <button onclick="triggerChaos()" class="mt-4 bg-green-500 px-6 py-3 rounded text-black">Click for Chaos</button>
-        </div>
-    </section>
-    
-    <section id="about" class="py-20 bg-gray-800 text-center">
-        <div class="container mx-auto">
-            <h2 class="text-3xl font-bold neon-text">About Me</h2>
-            <p class="mt-4">A coder, designer, and creative explorer. Passionate about tech, games, and art.</p>
-        </div>
-    </section>
-    
-    <section id="gallery" class="py-20 bg-gray-700 text-center">
-        <div class="container mx-auto">
-            <h2 class="text-3xl font-bold neon-text">Gallery of Weirdness</h2>
-            <div class="grid grid-cols-3 gap-4 mt-6">
-                <img src="https://placekitten.com/300/200" class="rounded shadow-md">
-                <img src="https://placebear.com/300/200" class="rounded shadow-md">
-                <img src="https://picsum.photos/300/200" class="rounded shadow-md">
+    <section id="home" class="h-screen flex items-center justify-center text-center pt-16">
+        <div class="animate__animated animate__fadeIn animate__delay-1s">
+            <h2 class="typing">Welcome to My Portfolio</h2>
+            <p class="mt-4 text-lg fade-in">Showcasing my work, projects, and passions.</p>
+            <div class="mt-8">
+                <a href="#projects" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors shadow-lg mx-2 btn-animated inline-block">View Projects</a>
+                <a href="#contact" class="bg-gray-200 text-gray-800 px-6 py-3 rounded-lg hover:bg-gray-300 transition-colors shadow-lg mx-2 btn-animated inline-block">Contact Me</a>
             </div>
         </div>
     </section>
     
-    <section id="projects" class="py-20 bg-gray-900 text-center">
-        <div class="container mx-auto">
-            <h2 class="text-3xl font-bold neon-text">My Projects</h2>
-            <p class="mt-4">A collection of things I've built and explored.</p>
-            <ul class="mt-6 text-lg">
-                <li>🎮 <a href="#" onclick="launchGame()" class="text-blue-400 hover:underline">Mini Snake Game (Easter Egg!)</a></li>
-                <li>💡 AI-powered Chatbot</li>
-                <li>📱 Interactive Web Apps</li>
-            </ul>
+    <section id="about" class="py-20 text-center bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold section-title">About Me</h2>
+            <div class="mt-8 flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-6 md:mb-0 animate__animated animate__fadeInLeft scroll-animation">
+                    <img src="https://lh3.googleusercontent.com/a/ACg8ocK2u4qZJ0TgvCy8XaEaYe5e6Hc3TokQJ7otqZcJQXTWcMhWWIU=s324-c-no" alt="Profile" class="rounded-full w-64 h-64 object-cover shadow-lg mx-auto hover-rotate">
+                </div>
+                <div class="md:w-2/3 md:pl-10 text-left animate__animated animate__fadeInRight scroll-animation">
+                    <p class="text-lg leading-relaxed">
+                        I'm a tech enthusiast with a strong foundation in Python, C, and C++, specializing in basic web design and creative problem-solving. My projects range from building innovative web platforms—like an artisan e-commerce site that supports local crafts to a forgotten recipe website that preserves culinary heritage.
+I thrive on solving complex problems and bringing unique ideas to life. Beyond coding, I’m a passionate car enthusiast and a dedicated Formula 1 fan, always inspired by cutting-edge engineering and innovation.
+I’m constantly learning and eager to take on new challenges that blend creativity with technology.
+                    </p>
+                    <div class="mt-4 flex flex-wrap">
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">CSS</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">C++</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     
-    <script>
-        function triggerChaos() {
-            document.body.style.background = "#" + Math.floor(Math.random()*16777215).toString(16);
-            document.querySelectorAll("h2, p, button, li").forEach(el => {
-                el.classList.add("falling");
-            });
-        }
-        
-        function launchGame() {
-            let gameWindow = window.open("", "", "width=400,height=400");
-            gameWindow.document.write(`
-                <html><head>
-                <style>* {margin:0; padding:0;} canvas {background:black; display:block; margin:auto;}</style>
-                </head><body>
-                <canvas id="gameCanvas" width="400" height="400"></canvas>
-                <script>
-                    const canvas = document.getElementById('gameCanvas');
-                    const ctx = canvas.getContext('2d');
-                    let snake = [{x:200, y:200}], direction = 'RIGHT', food = {x:100, y:100};
-                    document.addEventListener('keydown', event => {
-                        const key = event.key;
-                        if (key === 'ArrowUp' && direction !== 'DOWN') direction = 'UP';
-                        if (key === 'ArrowDown' && direction !== 'UP') direction = 'DOWN';
-                        if (key === 'ArrowLeft' && direction !== 'RIGHT') direction = 'LEFT';
-                        if (key === 'ArrowRight' && direction !== 'LEFT') direction = 'RIGHT';
-                    });
-                    function update() {
-                        let head = { ...snake[0] };
-                        if (direction === 'UP') head.y -= 20;
-                        if (direction === 'DOWN') head.y += 20;
-                        if (direction === 'LEFT') head.x -= 20;
-                        if (direction === 'RIGHT') head.x += 20;
-                        if (head.x < 0 || head.x >= 400 || head.y < 0 || head.y >= 400) window.close();
-                        snake.unshift(head);
-                        ctx.clearRect(0, 0, 400, 400);
-                        ctx.fillStyle = 'lime';
-                        snake.forEach(part => ctx.fillRect(part.x, part.y, 20, 20));
-                        ctx.fillStyle = 'red';
-                        ctx.fillRect(food.x, food.y, 20, 20);
-                    }
-                    setInterval(update, 100);
-                <\/script></body></html>
-            `);
-        }
-    </script>
+    <section id="gallery" class="py-20 text-center bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 section-title">Gallery</h2>
+            <div class="carousel-container animate__animated animate__fadeIn scroll-animation">
+                <div class="flex transition-transform duration-500 ease-in-out" id="carousel">
+                    <img src="/api/placeholder/600/400" class="w-full rounded shadow-lg">
+                    <img src="/api/placeholder/600/400" class="w-full rounded shadow-lg">
+                    <img src="/api/placeholder/600/400" class="w-full rounded shadow-lg">
+                </div>
+                <button onclick="prevSlide()" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white p-3 rounded-r-lg hover:bg-opacity-70 focus:outline-none carousel-btn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button onclick="nextSlide()" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white p-3 rounded-l-lg hover:bg-opacity-70 focus:outline-none carousel-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                <div class="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
+                    <button onclick="goToSlide(0)" class="w-3 h-3 rounded-full bg-white opacity-50 hover:opacity-100 focus:outline-none"></button>
+                    <button onclick="goToSlide(1)" class="w-3 h-3 rounded-full bg-white opacity-50 hover:opacity-100 focus:outline-none"></button>
+                    <button onclick="goToSlide(2)" class="w-3 h-3 rounded-full bg-white opacity-50 hover:opacity-100 focus:outline-none"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="projects" class="py-20 text-center bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 section-title">My Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card animate__animated scroll-animation">
+                    <div class="card-flip">
+                        <div class="card-front">
+                            <img src="/api/placeholder/400/250" alt="E-commerce Website" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-2">Fashion E-commerce</h3>
+                                <p class="text-gray-700 mb-4">A responsive e-commerce platform for a clothing brand with seamless shopping experience.</p>
+                                <span class="text-blue-600">Click to see details →</span>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="p-6 flex flex-col justify-between h-full">
+                                <div>
+                                    <h3 class="text-xl font-bold mb-4">Fashion E-commerce Details</h3>
+                                    <p class="text-gray-700 mb-4">Built with React, Node.js, and MongoDB. Features include user authentication, shopping cart functionality, payment gateway integration, and responsive design for all devices.</p>
+                                </div>
+                                <a href="https://fashion-ecommerce-example.com" class="text-blue-600 hover:underline">View Project →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="project-card animate__animated scroll-animation">
+                    <div class="card-flip">
+                        <div class="card-front">
+                            <img src="/api/placeholder/400/250" alt="Restaurant Website" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-2">Gourmet Restaurant</h3>
+                                <p class="text-gray-700 mb-4">A modern website for a high-end restaurant with online booking system.</p>
+                                <span class="text-blue-600">Click to see details →</span>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="p-6 flex flex-col justify-between h-full">
+                                <div>
+                                    <h3 class="text-xl font-bold mb-4">Gourmet Restaurant Details</h3>
+                                    <p class="text-gray-700 mb-4">Created with Vue.js and Firebase. Includes table reservation system, interactive menu with filtering options, integration with Google Maps, and a custom CMS for content management.</p>
+                                </div>
+                                <a href="https://gourmet-restaurant-demo.com" class="text-blue-600 hover:underline">View Project →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="project-card animate__animated scroll-animation">
+                    <div class="card-flip">
+                        <div class="card-front">
+                            <img src="/api/placeholder/400/250" alt="Fitness App" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-2">FitTrack App</h3>
+                                <p class="text-gray-700 mb-4">A fitness tracking application with workout plans and progress monitoring.</p>
+                                <span class="text-blue-600">Click to see details →</span>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="p-6 flex flex-col justify-between h-full">
+                                <div>
+                                    <h3 class="text-xl font-bold mb-4">FitTrack App Details</h3>
+                                    <p class="text-gray-700 mb-4">Developed with React Native for cross-platform functionality. Features include personalized workout plans, progress tracking with charts, nutrition calculator, and social sharing capabilities.</p>
+                                </div>
+                                <a href="https://fittrack-app.com" class="text-blue-600 hover:underline">View Project →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 4 -->
+                <div class="project-card animate__animated scroll-animation">
+                    <div class="card-flip">
+                        <div class="card-front">
+                            <img src="/api/placeholder/400/250" alt="Travel Blog" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-2">Wanderlust Blog</h3>
+                                <p class="text-gray-700 mb-4">A travel blog with interactive maps and destination guides.</p>
+                                <span class="text-blue-600">Click to see details →</span>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="p-6 flex flex-col justify-between h-full">
+                                <div>
+                                    <h3 class="text-xl font-bold mb-4">Wanderlust Blog Details</h3>
+                                    <p class="text-gray-700 mb-4">Built with WordPress and custom themes. Features include interactive maps with visited locations, photo galleries, subscription system, and integration with major social media platforms.</p>
+                                </div>
+                                <a href="https://wanderlust-travels.com" class="text-blue-600 hover:underline">View Project →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 5 -->
+                <div class="project-card animate__animated scroll-animation">
+                    <div class="card-flip">
+                        <div class="card-front">
+                            <img src="/api/placeholder/400/250" alt="Educational Platform" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-2">EduLearn Platform</h3>
+                                <p class="text-gray-700 mb-4">An online learning platform with course management and student tracking.</p>
+                                <span class="text-blue-600">Click to see details →</span>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="p-6 flex flex-col justify-between h-full">
+                                <div>
+                                    <h3 class="text-xl font-bold mb-4">EduLearn Platform Details</h3>
+                                    <p class="text-gray-700 mb-4">Developed with Django and PostgreSQL. Includes course creation tools, video streaming capabilities, quiz builder, student progress tracking, and certificate generation.</p>
+                                </div>
+                                <a href="https://edulearn-platform.com" class="text-blue-600 hover:underline">View Project →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 6 -->
+                <div class="project-card animate__animated scroll-animation">
+                    <div class="card-flip">
+                        <div class="card-front">
+                            <img src="/api/placeholder/400/250" alt="Weather App" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-2">WeatherNow App</h3>
+                                <p class="text-gray-700 mb-4">A weather forecasting application with real-time updates and location tracking.</p>
+                                <span class="text-blue-600">Click to see details →</span>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="p-6 flex flex-col justify-between h-full">
+                                <div>
+                                    <h3 class="text-xl font-bold mb-4">WeatherNow App Details</h3>
+                                    <p class="text-gray-700 mb-4">Built with Angular and integrated with weather APIs. Features include real-time weather updates, 7-day forecasts, location-based services, weather alerts, and customizable dashboard.</p>
+                                </div>
+                                <a href="https://weather-now-app.com" class="text-blue-600 hover:underline">View Project →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="py-20 text-center bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 section-title">Connect With Me</h2>
+            <p class="mb-6">I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.</p>
+            <!-- Social Media Icons -->
+            <div class="flex justify-center space-x-6 mb-10">
+                <a href="https://www.linkedin.com/in/cajetan-dsouza-6268a6308" target="_blank" class="social-icon text-blue-700 hover:text-blue-900 animate__animated animate__fadeInUp animate__delay-2s">
+                    <i class="fab fa-linkedin fa-3x"></i>
+                </a>
+                <a href="https://github.com/Cajetan02" target="_blank" class="social-icon text-gray-800 hover:text-black animate__animated animate__fadeInUp animate__delay-3s">
+                    <i class="fab fa-github fa-3x"></i>
+                </a>
+                <a href="https://www.instagram.com/cajetan_dsouza02?igsh=NzM0OHpzN2V3eXAw" target="_blank" class="social-icon text-pink-600 hover:text-pink-700 animate__animated animate__fadeInUp animate__delay-4s">
+                    <i class="fab fa-instagram fa-3x"></i>
+                </a>
+                <a href="mailto:cajetandsouza02@gmail.com" class="social-icon text-red-500 hover:text-red-600 animate__animated animate__fadeInUp animate__delay-5s">
+                    <i class="fas fa-envelope fa-3x"></i>
+                </a>
+            </div>
+        </section>
+    <footer class="bg-blue-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+            <p class="mt-2 text-sm">Made with <i class="fas fa-heart text-red-500 beating-heart"></i> and creativity</p>
+            <div class="mt-4">
+                <a href="#home" class="inline-block bg-blue-700 p-3 rounded-full back-to-top">
+                    <i class="fas fa-arrow-up"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
 </body>
 </html>
