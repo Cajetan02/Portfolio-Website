@@ -26,8 +26,14 @@
                 <li><a href="#projects" class="hover:underline nav-link">Projects</a></li>
                 <li><a href="#contact" class="hover:underline nav-link">Contact</a></li>
             </ul>
-
-
+            
+            <!-- Theme Toggle Switch -->
+            <div class="theme-toggle-container">
+                <i class="fas fa-sun theme-toggle-icon-sun"></i>
+                <input type="checkbox" id="themeToggle" class="theme-toggle">
+                <i class="fas fa-moon theme-toggle-icon-moon"></i>
+            </div>
+        </div>
     </nav>
     
     <section id="home" class="h-screen flex items-center justify-center text-center pt-16">
@@ -35,13 +41,13 @@
             <h2 class="typing">Welcome to My Portfolio</h2>
             <p class="mt-4 text-lg fade-in">Showcasing my work, projects, and passions.</p>
             <div class="mt-8">
-                <a href="#projects" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors shadow-lg mx-2 btn-animated inline-block">View Projects</a>
+                <a href="#projects" class="px-6 py-3 rounded-lg transition-colors shadow-lg mx-2 btn-animated inline-block">View Projects</a>
                 <a href="#contact" class="bg-gray-200 text-gray-800 px-6 py-3 rounded-lg hover:bg-gray-300 transition-colors shadow-lg mx-2 btn-animated inline-block">Contact Me</a>
             </div>
         </div>
     </section>
     
-    <section id="about" class="py-20 text-center bg-white">
+    <section id="about" class="py-20 text-center">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold section-title">About Me</h2>
             <div class="mt-8 flex flex-col md:flex-row items-center">
@@ -51,8 +57,8 @@
                 <div class="md:w-2/3 md:pl-10 text-left animate__animated animate__fadeInRight scroll-animation">
                     <p class="text-lg leading-relaxed">
                         I'm a tech enthusiast with a strong foundation in Python, C, and C++, specializing in basic web design and creative problem-solving. My projects range from building innovative web platforms—like an artisan e-commerce site that supports local crafts to a forgotten recipe website that preserves culinary heritage.
-I thrive on solving complex problems and bringing unique ideas to life. Beyond coding, I’m a passionate car enthusiast and a dedicated Formula 1 fan, always inspired by cutting-edge engineering and innovation.
-I’m constantly learning and eager to take on new challenges that blend creativity with technology.
+I thrive on solving complex problems and bringing unique ideas to life. Beyond coding, I'm a passionate car enthusiast and a dedicated Formula 1 fan, always inspired by cutting-edge engineering and innovation.
+I'm constantly learning and eager to take on new challenges that blend creativity with technology.
                     </p>
                     <div class="mt-4 flex flex-wrap">
                         <span class="skill-tag">HTML</span>
@@ -67,7 +73,9 @@ I’m constantly learning and eager to take on new challenges that blend creativ
         </div>
     </section>
     
-    <section id="gallery" class="py-20 text-center bg-gray-100">
+    <!-- Rest of the HTML remains the same -->
+    
+    <section id="gallery" class="py-20 text-center">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold mb-8 section-title">Gallery</h2>
             <div class="carousel-container animate__animated animate__fadeIn scroll-animation">
@@ -90,8 +98,7 @@ I’m constantly learning and eager to take on new challenges that blend creativ
             </div>
         </div>
     </section>
-    
-    <section id="projects" class="py-20 text-center bg-white">
+    <section id="projects" class="py-20 text-center ">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold mb-8 section-title">My Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -251,12 +258,12 @@ I’m constantly learning and eager to take on new challenges that blend creativ
                 </a>
             </div>
         </section>
-    <footer class="bg-blue-800 text-white py-8">
+    <footer class="py-8">
         <div class="container mx-auto px-4 text-center">
             <p>&copy; 2025 My Portfolio. All rights reserved.</p>
             <p class="mt-2 text-sm">Made with <i class="fas fa-heart text-red-500 beating-heart"></i> and creativity</p>
             <div class="mt-4">
-                <a href="#home" class="inline-block bg-blue-700 p-3 rounded-full back-to-top">
+                <a href="#home" class="inline-block p-3 rounded-full back-to-top">
                     <i class="fas fa-arrow-up"></i>
                 </a>
             </div>
