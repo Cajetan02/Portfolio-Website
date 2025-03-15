@@ -4,8 +4,7 @@ const totalSlides = document.querySelectorAll("#carousel img").length;
 
 
 const myButton = document.getElementById('main');
-if (window.matchMedia("(max-width: 732px)").matches) {
-  
+if (window.matchMedia("(max-width: 775px)").matches) {
   myButton.disabled = false;
 } else {
   myButton.disabled = true;

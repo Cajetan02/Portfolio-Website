@@ -39,16 +39,12 @@ A modern, responsive portfolio website built with HTML, CSS, and JavaScript. Thi
 ```
 portfolio-website/
 ├── index.html           # Main HTML file
-├── css/
-│   ├── styles.css       # Main stylesheet
-│   └── animations.css   # Animation definitions
-├── js/
-│   └── main.js          # JavaScript functionality
+├── style.css       # Main stylesheet
+├── script.js          # JavaScript functionality
 ├── images/              # Website images and project screenshots
 │   ├── projects/        # Project-specific images
 │   ├── icons/           # UI icons
 │   └── logo.svg         # Personal logo
-└── assets/              # Other resources (resume, etc.)
 ```
 
 ## 🚀 Getting Started
@@ -109,4 +105,4 @@ Replace this with your information and a brief bio highlighting your skills and 
 
 ---
 
-© 2025 Cajetan Dsouza | [GitHub](https://github.com/yourusername) | [LinkedIn](https://linkedin.com/in/yourprofile)
+© 2025 Cajetan Dsouza | [GitHub](https://github.com/Cajetan02) | [LinkedIn](https://www.linkedin.com/in/cajetan-dsouza-6268a6308)
