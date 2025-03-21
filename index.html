@@ -14,6 +14,11 @@
     <nav class="bg-blue-700 p-4 text-white fixed w-full z-10">
         <div class="container mx-auto flex justify-between items-center">
             <div class="flex items-center space-x-3">
+                <div  id="pfp" class="logo-container  animate__animated animate__pulse animate__infinite animate__slow">
+                    <button  id="main" class="openbtn" onclick="openNav()">
+                         <img src="https://lh3.googleusercontent.com/a/ACg8ocK2u4qZJ0TgvCy8XaEaYe5e6Hc3TokQJ7otqZcJQXTWcMhWWIU=s324-c-no" alt="Logo" class="w-full h-full object-cover">
+                        </button>
+                </div>
                 <div id="mySidebar" class="sidebar">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                     <a href="#home">Home</a>
@@ -22,11 +27,7 @@
                     <a href="#contact">Projects</a>
                     <a href="#contact">Contact</a>
                   </div>
-                <div  id="pfp" class="logo-container  animate__animated animate__pulse animate__infinite animate__slow">
-                    <button  id="main" class="openbtn" onclick="openNav()">
-                         <img src="https://lh3.googleusercontent.com/a/ACg8ocK2u4qZJ0TgvCy8XaEaYe5e6Hc3TokQJ7otqZcJQXTWcMhWWIU=s324-c-no" alt="Logo" class="w-full h-full object-cover">
-                        </button>
-                </div>
+                
             </div>
             <ul class="hidden md:flex space-x-4 justify-start">
                 <li><a href="#home" class="hover:underline nav-link">Home</a></li>
@@ -89,9 +90,9 @@ I'm constantly learning and eager to take on new challenges that blend creativit
             <h2 class="text-3xl font-bold mb-8 section-title">Gallery</h2>
             <div class="carousel-container animate__animated animate__fadeIn scroll-animation">
                 <div class="flex transition-transform duration-500 ease-in-out" id="carousel">
-                    <img src="/api/placeholder/600/400" class="w-full rounded shadow-lg">
-                    <img src="/api/placeholder/600/400" class="w-full rounded shadow-lg">
-                    <img src="/api/placeholder/600/400" class="w-full rounded shadow-lg">
+                    <img src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg" class="w-full rounded shadow-lg">
+                    <img src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg" class="w-full rounded shadow-lg">
+                    <img src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg" class="w-full rounded shadow-lg">
                 </div>
                 <button onclick="prevSlide()" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white p-3 rounded-r-lg hover:bg-opacity-70 focus:outline-none carousel-btn">
                     <i class="fas fa-chevron-left"></i>
@@ -107,138 +108,74 @@ I'm constantly learning and eager to take on new challenges that blend creativit
             </div>
         </div>
     </section>
-    <section id="projects" class="py-20 text-center ">
+    <section id="projects" class="py-20 text-center">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold mb-8 section-title">My Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Project 1 -->
-                <div class="project-card animate__animated scroll-animation">
-                    <div class="card-flip">
-                        <div class="card-front">
+                <div class="project-card">
+                    <div class="card-inner">
+                        <div class="card-front shadow-lg rounded-lg overflow-hidden">
                             <img src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg" alt="E-commerce Website" class="w-full h-48 object-cover">
                             <div class="p-6">
                                 <h3 class="text-xl font-bold mb-2">Fashion E-commerce</h3>
-                                <p class="text-gray-700 mb-4">A responsive e-commerce platform for a clothing brand with seamless shopping experience.</p>
-                                <span class="text-blue-600">Click to see details →</span>
+                                <p class="text-gray-700 dark:text-gray-300 mb-4">A responsive e-commerce platform for a clothing brand with seamless shopping experience.</p>
+                                <span class="text-blue-600 dark:text-blue-400">Click to see details →</span>
                             </div>
                         </div>
-                        <div class="card-back">
+                        <div class="card-back shadow-lg rounded-lg overflow-hidden">
                             <div class="p-6 flex flex-col justify-between h-full">
                                 <div>
-                                    <h3 class="text-xl font-bold mb-4">Fashion E-commerce Details</h3>
-                                    <p class="text-gray-700 mb-4">Built with React, Node.js, and MongoDB. Features include user authentication, shopping cart functionality, payment gateway integration, and responsive design for all devices.</p>
+                                    <h3 class="text-xl font-bold mb-4 text-white">Fashion E-commerce Details</h3>
+                                    <p class="text-white opacity-90 mb-4">Built with React, Node.js, and MongoDB. Features include user authentication, shopping cart functionality, payment gateway integration, and responsive design for all devices.</p>
                                 </div>
-                                <a href="https://fashion-ecommerce-example.com" class="text-blue-600 hover:underline">View Project →</a>
+                                <a href="#" class="text-white hover:underline">View Project →</a>
                             </div>
                         </div>
                     </div>
                 </div>
+                
                 <!-- Project 2 -->
-                <div class="project-card animate__animated scroll-animation">
-                    <div class="card-flip">
-                        <div class="card-front">
-                            <img src="/api/placeholder/400/250" alt="Restaurant Website" class="w-full h-48 object-cover">
+                <div class="project-card">
+                    <div class="card-inner">
+                        <div class="card-front shadow-lg rounded-lg overflow-hidden">
+                            <img src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg" alt="Restaurant Website" class="w-full h-48 object-cover">
                             <div class="p-6">
                                 <h3 class="text-xl font-bold mb-2">Gourmet Restaurant</h3>
-                                <p class="text-gray-700 mb-4">A modern website for a high-end restaurant with online booking system.</p>
-                                <span class="text-blue-600">Click to see details →</span>
+                                <p class="text-gray-700 dark:text-gray-300 mb-4">A modern website for a high-end restaurant with online booking system.</p>
+                                <span class="text-blue-600 dark:text-blue-400">Click to see details →</span>
                             </div>
                         </div>
-                        <div class="card-back">
+                        <div class="card-back shadow-lg rounded-lg overflow-hidden">
                             <div class="p-6 flex flex-col justify-between h-full">
                                 <div>
-                                    <h3 class="text-xl font-bold mb-4">Gourmet Restaurant Details</h3>
-                                    <p class="text-gray-700 mb-4">Created with Vue.js and Firebase. Includes table reservation system, interactive menu with filtering options, integration with Google Maps, and a custom CMS for content management.</p>
+                                    <h3 class="text-xl font-bold mb-4 text-white">Gourmet Restaurant Details</h3>
+                                    <p class="text-white opacity-90 mb-4">Created with Vue.js and Firebase. Includes table reservation system, interactive menu with filtering options, integration with Google Maps, and a custom CMS for content management.</p>
                                 </div>
-                                <a href="https://gourmet-restaurant-demo.com" class="text-blue-600 hover:underline">View Project →</a>
+                                <a href="#" class="text-white hover:underline">View Project →</a>
                             </div>
                         </div>
                     </div>
                 </div>
+                
                 <!-- Project 3 -->
-                <div class="project-card animate__animated scroll-animation">
-                    <div class="card-flip">
-                        <div class="card-front">
-                            <img src="/api/placeholder/400/250" alt="Fitness App" class="w-full h-48 object-cover">
+                <div class="project-card">
+                    <div class="card-inner">
+                        <div class="card-front shadow-lg rounded-lg overflow-hidden">
+                            <img src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg" alt="Fitness App" class="w-full h-48 object-cover">
                             <div class="p-6">
                                 <h3 class="text-xl font-bold mb-2">FitTrack App</h3>
-                                <p class="text-gray-700 mb-4">A fitness tracking application with workout plans and progress monitoring.</p>
-                                <span class="text-blue-600">Click to see details →</span>
+                                <p class="text-gray-700 dark:text-gray-300 mb-4">A fitness tracking application with workout plans and progress monitoring.</p>
+                                <span class="text-blue-600 dark:text-blue-400">Click to see details →</span>
                             </div>
                         </div>
-                        <div class="card-back">
+                        <div class="card-back shadow-lg rounded-lg overflow-hidden">
                             <div class="p-6 flex flex-col justify-between h-full">
                                 <div>
-                                    <h3 class="text-xl font-bold mb-4">FitTrack App Details</h3>
-                                    <p class="text-gray-700 mb-4">Developed with React Native for cross-platform functionality. Features include personalized workout plans, progress tracking with charts, nutrition calculator, and social sharing capabilities.</p>
+                                    <h3 class="text-xl font-bold mb-4 text-white">FitTrack App Details</h3>
+                                    <p class="text-white opacity-90 mb-4">Developed with React Native for cross-platform functionality. Features include personalized workout plans, progress tracking with charts, nutrition calculator, and social sharing capabilities.</p>
                                 </div>
-                                <a href="https://fittrack-app.com" class="text-blue-600 hover:underline">View Project →</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project 4 -->
-                <div class="project-card animate__animated scroll-animation">
-                    <div class="card-flip">
-                        <div class="card-front">
-                            <img src="/api/placeholder/400/250" alt="Travel Blog" class="w-full h-48 object-cover">
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold mb-2">Wanderlust Blog</h3>
-                                <p class="text-gray-700 mb-4">A travel blog with interactive maps and destination guides.</p>
-                                <span class="text-blue-600">Click to see details →</span>
-                            </div>
-                        </div>
-                        <div class="card-back">
-                            <div class="p-6 flex flex-col justify-between h-full">
-                                <div>
-                                    <h3 class="text-xl font-bold mb-4">Wanderlust Blog Details</h3>
-                                    <p class="text-gray-700 mb-4">Built with WordPress and custom themes. Features include interactive maps with visited locations, photo galleries, subscription system, and integration with major social media platforms.</p>
-                                </div>
-                                <a href="https://wanderlust-travels.com" class="text-blue-600 hover:underline">View Project →</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project 5 -->
-                <div class="project-card animate__animated scroll-animation">
-                    <div class="card-flip">
-                        <div class="card-front">
-                            <img src="/api/placeholder/400/250" alt="Educational Platform" class="w-full h-48 object-cover">
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold mb-2">EduLearn Platform</h3>
-                                <p class="text-gray-700 mb-4">An online learning platform with course management and student tracking.</p>
-                                <span class="text-blue-600">Click to see details →</span>
-                            </div>
-                        </div>
-                        <div class="card-back">
-                            <div class="p-6 flex flex-col justify-between h-full">
-                                <div>
-                                    <h3 class="text-xl font-bold mb-4">EduLearn Platform Details</h3>
-                                    <p class="text-gray-700 mb-4">Developed with Django and PostgreSQL. Includes course creation tools, video streaming capabilities, quiz builder, student progress tracking, and certificate generation.</p>
-                                </div>
-                                <a href="https://edulearn-platform.com" class="text-blue-600 hover:underline">View Project →</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project 6 -->
-                <div class="project-card animate__animated scroll-animation">
-                    <div class="card-flip">
-                        <div class="card-front">
-                            <img src="/api/placeholder/400/250" alt="Weather App" class="w-full h-48 object-cover">
-                            <div class="p-6">
-                                <h3 class="text-xl font-bold mb-2">WeatherNow App</h3>
-                                <p class="text-gray-700 mb-4">A weather forecasting application with real-time updates and location tracking.</p>
-                                <span class="text-blue-600">Click to see details →</span>
-                            </div>
-                        </div>
-                        <div class="card-back">
-                            <div class="p-6 flex flex-col justify-between h-full">
-                                <div>
-                                    <h3 class="text-xl font-bold mb-4">WeatherNow App Details</h3>
-                                    <p class="text-gray-700 mb-4">Built with Angular and integrated with weather APIs. Features include real-time weather updates, 7-day forecasts, location-based services, weather alerts, and customizable dashboard.</p>
-                                </div>
-                                <a href="https://weather-now-app.com" class="text-blue-600 hover:underline">View Project →</a>
+                                <a href="#" class="text-white hover:underline">View Project →</a>
                             </div>
                         </div>
                     </div>
@@ -246,8 +183,65 @@ I'm constantly learning and eager to take on new challenges that blend creativit
             </div>
         </div>
     </section>
-    
-    <section id="contact" class="py-20 text-center bg-gray-100">
+<!-- Blog Section -->
+<section id="blog" class="py-20 text-center">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-8 section-title">F1 Blog</h2>
+        <p class="mb-10 max-w-3xl mx-auto">Sharing my passion for Formula 1 racing, analysis of current drivers, and thoughts on where the sport is heading.</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Blog Post 1 -->
+            <div class=" rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:transform hover:scale-105 scroll-animation">
+                <img src="https://images.pexels.com/photos/12795700/pexels-photo-12795700.jpeg" alt="F1 Racing" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full  bg-blue-600 mb-2">Analysis</span>
+                    <h3 class="text-xl font-bold mb-3">The Evolution of Max Verstappen</h3>
+                    <p class=" mb-4">From a young aggressive talent to a calculated three-time world champion - examining Max's journey and what makes him one of the all-time greats.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm ">March 15, 2025</span>
+                        <a href="#blog-post-1" class="text-blue-600 dark:text-blue-400 hover:underline">Read More →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Blog Post 2 -->
+            <div class=" rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:transform hover:scale-105 scroll-animation">
+                <img src="https://images.pexels.com/photos/12450650/pexels-photo-12450650.jpeg" alt="F1 Car" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full bg-green-600 mb-2">Perspective</span>
+                    <h3 class="text-xl font-bold mb-3">The Next Generation: Rising F1 Stars</h3>
+                    <p class="t mb-4">From Piastri to Bearman - exploring the new wave of young drivers and who has the potential to become the next championship contender.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm ">March 5, 2025</span>
+                        <a href="#blog-post-2" class="text-blue-600 dark:text-blue-400 hover:underline">Read More →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Blog Post 3 -->
+            <div class=" rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:transform hover:scale-105 scroll-animation">
+                <img src="https://www.formula1.com/content/dam/fom-website/manual/Misc/SustainabilityUpdate/F1-Progress-to-Net-Zero-2030-16x9-NEW-1.jpg" alt="F1 Paddock" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <span class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full  bg-purple-600 mb-2">Future</span>
+                    <h3 class="text-xl font-bold mb-3">F1 in 2030: Sustainability & Technology</h3>
+                    <p class=" mb-4">How Formula 1's push for sustainability and advanced technology will reshape racing, team strategies, and fan experiences in the coming years.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm ">February 25, 2025</span>
+                        <a href="#blog-post-3" class="text-blue-600 dark:text-blue-400 hover:underline">Read More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- View All Button -->
+        <div class="mt-12">
+            <a href="#all-blogs" class="px-6 py-3 rounded-lg transition-colors shadow-lg btn-animated inline-block">View All Posts</a>
+        </div>
+    </div>
+</section>
+
+
+    <section id="contact" class="py-20 text-center">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold mb-8 section-title">Connect With Me</h2>
             <p class="mb-6">I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.</p>
@@ -280,5 +274,92 @@ I'm constantly learning and eager to take on new challenges that blend creativit
     </footer>
     
     <script src="script.js"></script>
+
+<!-- Blog Post Modal/Expanded Content (Hidden by default, would be shown with JavaScript) -->
+<div id="blog-post-1" class="hidden">
+    <div class="container mx-auto px-4 py-12">
+        <h2 class="text-3xl font-bold mb-4">The Evolution of Max Verstappen</h2>
+        <p class="text-sm  mb-6">Published on March 15, 2025 | By Cajetan D'Souza</p>
+        
+        <img src="https://images.pexels.com/photos/12795700/pexels-photo-12795700.jpeg" alt="F1 Racing" class="w-full h-96 object-cover rounded-lg mb-8">
+        
+        <div class="prose max-w-none">
+            <p>When Max Verstappen burst onto the Formula 1 scene in 2015 at just 17 years old, many questioned if he was ready. His aggressive driving style and fearless overtaking moves earned him both praise and criticism. Fast forward to 2025, and we're looking at a three-time world champion who has fundamentally changed how modern F1 racing is approached.</p>
+            
+            <h3 class="text-2xl font-bold mt-6 mb-4">The Raw Talent Years</h3>
+            <p>Verstappen's early years at Toro Rosso and then Red Bull showed flashes of brilliance mixed with impetuous decision-making. His first win in Barcelona 2016, becoming the youngest ever race winner, demonstrated his raw talent. However, his aggressive defending and racing incidents had veterans like Sebastian Vettel and Lewis Hamilton questioning his approach.</p>
+            
+            <h3 class="text-2xl font-bold mt-6 mb-4">The Transformation</h3>
+            <p>The pivotal moment in Verstappen's career came during the 2021 championship battle with Lewis Hamilton. Under immense pressure, we saw Max transform from a purely instinctive driver to one who could balance aggression with calculation. This mental evolution, combined with his natural talent, created a formidable competitor who could adapt his driving style to any situation.</p>
+            
+            <h3 class="text-2xl font-bold mt-6 mb-4">The Complete Package</h3>
+            <p>Today's Verstappen is the complete package. His technical feedback has developed to the point where Red Bull effectively builds the car around his preferences. His race craft has matured—knowing when to push and when to manage. Perhaps most impressively, his ability to extract performance in any condition—be it wet weather, tire degradation, or fuel saving—puts him in the conversation with the all-time greats.</p>
+            
+            <h3 class="text-2xl font-bold mt-6 mb-4">The Future Legacy</h3>
+            <p>As we look to the future, the question isn't whether Verstappen will win more championships, but how many. At 27 years old, he theoretically has another decade in the sport. Will he chase Hamilton's seven titles? Will he stay loyal to Red Bull or seek new challenges? Whatever path he chooses, his impact on Formula 1 has already been substantial—raising the bar for what it means to be a complete driver in the modern era.</p>
+            
+            <p class="mt-6">What are your thoughts on Verstappen's evolution as a driver? Let me know in the comments below!</p>
+        </div>
+    </div>
+</div>
+<!-- Additional hidden blog content to be shown in modals -->
+
+<div id="blog-post-2" class="hidden">
+    <div class="container mx-auto px-4 py-12">
+        <h2 class="text-3xl font-bold mb-4">The Next Generation: Rising F1 Stars</h2>
+        <p class="text-sm  mb-6">Published on March 5, 2025 | By Cajetan D'Souza</p>
+        
+        <img src="https://images.pexels.com/photos/12450650/pexels-photo-12450650.jpeg" alt="F1 Car" class="w-full h-96 object-cover rounded-lg mb-8">
+        
+        <div class="prose max-w-none">
+            <p>Formula 1 has always thrived on new talent. From the emergence of Lewis Hamilton in 2007 to Max Verstappen's debut at 17, the sport constantly evolves through its rising stars. As we look at the grid in 2025, several young drivers have demonstrated they have what it takes to lead the next era of Formula 1.</p>
+            
+            <h3 class="text-2xl font-bold mt-6 mb-4">Oscar Piastri: The Methodical Challenger</h3>
+            <p>The Australian's journey to F1 was unconventional - after winning F3 and F2 championships back-to-back, he spent a year on the sidelines before joining McLaren. What impresses me most about Piastri is his racing intelligence. Unlike many rookies who show speed but lack consistency, Piastri arrived with a complete package. His driving style reminds me of early Alonso - precise, calculated, and remarkably mature. After his breakthrough win at Monaco last year and consistent podiums this season, he's firmly established himself as a future title contender.</p>
+            
+            <h3 class="text-2xl font-bold mt-6 mb-4">Ollie Bearman: Raw Talent Refined</h3>
+            <p>When Bearman stepped in as a last-minute replacement at Ferrari last year and scored points on debut, the paddock took notice. Now with his full-time seat at Haas, we're seeing the development of a special talent. His qualifying pace is exceptional - consistently extracting the maximum from the car. What he's still developing is his race craft, particularly tire management over long stints. If he can master this aspect, his ceiling is incredibly high, and the rumors linking him to a top team for 2026 seem well-founded.</p>
+            
+            <h3 class="text-2xl font-bold mt-6 mb-4">Franco Colapinto: The Dark Horse</h3>
+            <p>The Argentine was the surprise package of last season. After his mid-season call-up to Williams, few expected him to adapt so quickly to Formula 1. His fearless overtaking and natural car control have drawn comparisons to a young Montoya. What makes Colapinto interesting is his unorthodox background - coming through stock cars in South America before transitioning to European open-wheel racing. This diverse experience seems to have given him an adaptability that serves him well in changing conditions. If Williams continues its upward trajectory, Colapinto could be the surprise championship challenger no one saw coming.</p>
+            
+            <h3 class="text-2xl font-bold mt-6 mb-4">The Next Championship Battle</h3>
+            <p>Looking ahead to the next few seasons, I believe we're witnessing the formation of a new rivalry that could define the post-Verstappen/Hamilton era. Piastri and Bearman, with their contrasting styles and personalities, have the potential to create a championship battle reminiscent of the Prost-Senna dynamic - the methodical perfectionist versus the instinctive racer.</p>
+            
+            <p class="mt-6">Which of these young drivers do you think has the highest ceiling? And who else would you add to this list? Share your thoughts!</p>
+        </div>
+    </div>
+</div>
+
+<div id="blog-post-3" class="hidden">
+    <div class="container mx-auto px-4 py-12">
+        <h2 class="text-3xl font-bold mb-4">F1 in 2030: Sustainability & Technology</h2>
+        <p class="text-sm  mb-6">Published on February 25, 2025 | By Cajetan D'Souza</p>
+        
+        <img src="https://www.formula1.com/content/dam/fom-website/manual/Misc/SustainabilityUpdate/F1-Progress-to-Net-Zero-2030-16x9-NEW-1.jpg"alt="F1 Paddock" class="w-full h-96 object-cover rounded-lg mb-8">
+        
+        <div class="prose max-w-none">
+            <p>Formula 1 stands at a fascinating crossroads. The sport that was once synonymous with excess and environmental disregard has transformed itself into a pioneer of sustainable technologies. As we look toward 2030, F1's commitment to carbon neutrality and technological innovation will reshape not just racing, but potentially the future of transportation itself.</p>
+            
+            <h3 class="text-2xl font-bold mt-6 mb-4">Beyond Biofuels: The Next Generation Power Units</h3>
+            <p>The current transition to 100% sustainable fuels is just the beginning. By 2030, I predict we'll see a hybrid approach that combines advanced biofuels with hydrogen technology and enhanced energy recovery systems. This won't just be about reducing emissions - it will fundamentally change race strategy. Imagine teams having multiple energy deployment options during a race, creating a complex energy chess match where the most efficient use of various power sources becomes as crucial as tire management is today.</p>
+            
+            <h3 class="text-2xl font-bold mt-6 mb-4">AI Race Engineers and Real-Time Simulation</h3>
+            <p>The role of AI in Formula 1 will expand dramatically. We're already seeing the beginnings with advanced race simulations, but by 2030, AI race engineers could be making real-time strategy decisions based on processing millions of variables per second. This raises fascinating questions about driver skill versus technological advantage. Will there be limits placed on AI assistance to preserve the human element? Or will the perfect symbiosis between driver and AI become the new measure of racing excellence?</p>
+            
+            <h3 class="text-2xl font-bold mt-6 mb-4">Immersive Fan Experiences</h3>
+            <p>The way we experience F1 as fans will be unrecognizable by 2030. Beyond current VR and AR offerings, we'll likely see completely personalized viewing experiences where fans can switch between any driver's perspective in real-time, access instant biometric data, and even experience simulated g-forces through haptic feedback systems. The traditional broadcast will be replaced by a fully customizable experience that puts fans virtually in the cockpit, pitwall, or anywhere else they choose.</p>
+            
+            <h3 class="text-2xl font-bold mt-6 mb-4">The Expanded Calendar: Global and Sustainable</h3>
+            <p>The 2025 season's record 25 races seems to be pushing the limit of what's logistically possible, but technological advances will enable further expansion while actually reducing F1's carbon footprint. Expect to see teams operating with distributed personnel - race engineers working remotely from team bases, localized equipment hubs to reduce transportation, and carbon-neutral freight solutions. This could enable a truly global calendar with 30+ races while maintaining F1's commitment to sustainability.</p>
+            
+            <h3 class="text-2xl font-bold mt-6 mb-4">Will Formula 1 Remain Formula 1?</h3>
+            <p>The central question is whether all these changes will preserve what makes F1 special. I believe they will, because at its core, Formula 1 isn't defined by its technology but by its pursuit of the absolute limit of what's possible. The sport has already transformed from V12 engines to turbo-hybrids while maintaining its essential character. The coming changes will continue this tradition of evolution while maintaining the central human drama of exceptional athletes pushing themselves and their machines to the edge of possibility.</p>
+            
+            <p class="mt-6">What aspects of future F1 are you most excited about? And what traditions do you think the sport must preserve at all costs? Let me know your thoughts!</p>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>

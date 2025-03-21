@@ -340,42 +340,71 @@ section:nth-child(even) {
 /* Project Cards */
 .project-card {
     perspective: 1000px;
-    height: 100%;
+    height: 450px;
+    width: 100%;
+    margin-bottom: 1.5rem;
 }
 
-.card-flip {
+.card-inner {
     position: relative;
     width: 100%;
     height: 100%;
+    text-align: left;
     transition: transform 0.8s;
     transform-style: preserve-3d;
 }
 
-.project-card:hover .card-flip {
+.project-card:hover .card-inner {
     transform: rotateY(180deg);
 }
 
-.card-front, 
-.card-back {
+.card-front, .card-back {
     position: absolute;
     width: 100%;
     height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
     backface-visibility: hidden;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card-front {
     background-color: var(--card-bg);
-    z-index: 2;
 }
 
 .card-back {
     background-color: var(--primary-color);
     transform: rotateY(180deg);
-    display: flex;
-    flex-direction: column;
+}
+
+/* Make sure scroll animations work properly */
+.scroll-animation {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scroll-animation.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Scroll Animation Helper - Modified to ensure visibility */
+.scroll-animation {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scroll-animation.animate,
+.project-card.animate__animated {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* Force visibility for projects section */
+#projects .project-card {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    visibility: visible !important;
 }
 
 /* Scroll Animation Helper */
@@ -438,7 +467,126 @@ section:nth-child(even) {
     color:#000;
     font-size: 16px;
 }
+/* Blog Section Styles */
 
+/* Blog cards with hover effects */
+#blog .grid > div {
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+#blog .grid > div:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Blog category tags */
+#blog .rounded-full {
+    transition: all 0.3s ease;
+}
+
+#blog .rounded-full:hover {
+    transform: scale(1.05);
+}
+
+/* Blog post animation on scroll */
+#blog .scroll-animation {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+#blog .scroll-animation.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Blog post modal styles */
+.blog-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--card-bg);
+    z-index: 50;
+    overflow-y: auto;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.blog-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.blog-modal-content {
+    background-color: var(--card-bg);
+    margin: 50px auto;
+    padding: 2rem;
+    width: 90%;
+    max-width: 900px;
+    border-radius: 0.5rem;
+    position: relative;
+    color: var(--text-color);
+}
+
+.blog-close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.blog-close-btn:hover {
+    background-color: var(--primary-dark);
+    transform: rotate(90deg);
+}
+
+/* Blog "Read More" link animation */
+#blog a.hover\:underline {
+    position: relative;
+    text-decoration: none;
+}
+
+#blog a.hover\:underline::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: width 0.3s;
+}
+
+#blog a.hover\:underline:hover::after {
+    width: 100%;
+}
+
+/* Blog date styling */
+#blog .text-gray-500 {
+    font-style: italic;
+}
+
+/* Blog image hover effect */
+#blog img {
+    transition: transform 0.5s ease;
+}
+
+#blog .grid > div:hover img {
+    transform: scale(1.05);
+}
 /* Footer */
 footer {
     background-color: var(--primary-dark);
